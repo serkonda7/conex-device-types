@@ -1,0 +1,21 @@
+{
+  "name": "conex-device-types",
+  "private": true,
+  "license": "CC0-1.0",
+  "type": "module",
+  "scripts": {
+    "check": "bun scripts/lint_yaml.ts && biome ci && bun test",
+    "format": "biome check --write",
+    "update-schema": "bun scripts/update_schema.ts",
+    "postinstall": "lefthook install"
+  },
+  "packageManager": "bun@1.4.2",
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/bun": "1.4.2",
+    "ajv": "^8.20.0",
+    "lefthook": "^2.1.16",
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "$id": "urn:conex-device-types:conex",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "conex extensions to the devicetype-library device-type schema. Keys listed here are validated by this schema and stripped before validating against devicetype.json.",
+  "properties": {
+    "display-ports": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/display-port"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "display-port": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "type": {
+          "type": "string",
+          "enum": ["hdmi", "displayport", "vga", "dvi"]
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": ["name", "type"],
+      "additionalProperties": false
+    }
+  }
+}

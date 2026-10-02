@@ -1,0 +1,39 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    // schema/ is vendored verbatim from netbox-community/devicetype-library;
+    // YAML waits for Biome 2.6; scripts/lint_yaml.ts covers it until then.
+    "includes": ["**", "!schema", "!**/*.md", "!**/*.yaml", "!**/*.yml"]
+  },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "style": {
+        "useBlockStatements": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "trailingCommas": "all",
+      "quoteStyle": "single",
+      "lineWidth": 100
+    }
+  },
+  "json": {
+    "formatter": {
+      "lineWidth": 100
+    }
+  }
+}
