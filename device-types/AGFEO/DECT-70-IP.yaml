@@ -1,0 +1,20 @@
+---
+manufacturer: AGFEO
+model: DECT 70 IP
+slug: agfeo-dect-70-ip
+part_number: '6101576'
+u_height: 0
+is_full_depth: false
+airflow: passive
+weight: 122
+weight_unit: g
+comments: '[Datasheet](https://agfeo.de/produkt/dect-70-ip/)'
+power-ports:
+  - name: Cradle PSU
+    type: dc-terminal
+    description: Charging cradle power supply, handset incl. battery 122g
+    maximum_draw: 2
+interfaces:
+  - name: DECT
+    type: other
+    description: DECT radio link to DECT IP-Basis or DECT IP-Basis XS

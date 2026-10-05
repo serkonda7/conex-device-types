@@ -1,0 +1,18 @@
+---
+manufacturer: AGFEO
+model: DECT IP-Basis pro
+slug: agfeo-dect-ip-basis-pro
+part_number: '6101730'
+u_height: 0
+is_full_depth: false
+airflow: passive
+comments: '[Datasheet](https://agfeo.de/produkt/dect-ip-basis-pro/)'
+interfaces:
+  - name: LAN
+    type: 100base-tx
+    description: LAN uplink to AGFEO system with SIP registrar, PoE powered
+    poe_mode: pd
+    poe_type: type1-ieee802.3af
+  - name: DECT
+    type: other
+    description: DECT radio to handsets and repeaters

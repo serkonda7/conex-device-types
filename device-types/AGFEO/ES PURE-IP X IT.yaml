@@ -1,0 +1,14 @@
+---
+manufacturer: AGFEO
+model: ES PURE-IP X IT
+slug: agfeo-es-pure-ip-x-it
+part_number: ES PURE-IP X IT
+u_height: 1
+is_full_depth: false
+weight: 0.8
+weight_unit: kg
+interfaces:
+  - name: LAN1
+    type: 1000base-t
+  - name: LAN2
+    type: 1000base-t

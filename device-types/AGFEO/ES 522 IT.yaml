@@ -1,0 +1,16 @@
+---
+manufacturer: AGFEO
+model: ES 522 IT
+slug: agfeo-es-522-it
+part_number: ES 522 IT
+u_height: 1
+is_full_depth: false
+interfaces:
+  - name: LAN1
+    type: 100base-tx
+comments: |
+  2 digitale Ports (schaltbar für ISDN extern, S0 intern oder UP0)
+  8 analoge Ports
+  2 externe S0-Ports
+  2 UP0-Ports
+  1 FTZ-Türschnittstelle.

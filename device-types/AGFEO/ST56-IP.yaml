@@ -1,0 +1,22 @@
+---
+manufacturer: AGFEO
+model: ST56 IP
+slug: agfeo-st56-ip
+part_number: '6101572'
+u_height: 0
+is_full_depth: false
+airflow: passive
+weight: 0.9
+weight_unit: kg
+comments: '[Datasheet](https://agfeo.de/produkt/st-56-ip/)'
+power-ports:
+  - name: PSU
+    type: dc-terminal
+    description: Optional external PSU 6100826, not needed when powered via PoE
+    maximum_draw: 4
+interfaces:
+  - name: LAN
+    type: 1000base-t
+    description: ASIP uplink to ES or HyperVoice system, 10/100/1000 Mbit
+    poe_mode: pd
+    poe_type: type1-ieee802.3af

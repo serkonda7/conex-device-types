@@ -6,7 +6,8 @@ YAML file per model in `device-types/<Manufacturer>/<model>.yaml`.
 The format is the [NetBox devicetype-library](https://github.com/netbox-community/devicetype-library)
 format, so definitions can be copied from there. Conex imports `u_height`,
 `is_full_depth`, `description`, `comments`, and the port lists `interfaces`,
-`console-ports`, `power-ports` and `display-ports`, and ignores everything else.
+`ports`, `power-ports`, `power-outlets` and `display-ports`, and ignores everything else.
+`console-ports` is accepted as an alias of `ports`.
 
 ```yaml
 ---
@@ -29,7 +30,7 @@ display-ports: # conex only: hdmi, displayport, vga, dvi
 Conex adds these rules on top of NetBox's:
 
 - `u_height` must be a whole number from 0 to 60.
-- Port names must be unique, with at most 50 letters, digits, `.`, `-`, or `_`.
+- Port names must be unique, with at most 50 letters, digits, space, `.`, `-`, or `_`.
 
 ## Development
 

@@ -1,0 +1,53 @@
+---
+manufacturer: Lenovo
+model: ThinkPad Ultra Docking Station 40AJ
+slug: lenovo-thinkpad-ultra-docking-station-40aj
+part_number: 40AJ0135US
+description: ThinkPad Ultra Docking Station Type 40AJ side-connect dock, 135W
+comments: '[Lenovo support PD500173](https://support.lenovo.com/us/en/solutions/pd500173-thinkpad-ultra-docking-station-overview-and-service-parts)'
+u_height: 0
+is_full_depth: false
+airflow: passive
+weight: 0.81
+weight_unit: kg
+power-ports:
+  - name: DC-IN
+    type: dc-terminal
+    maximum_draw: 135
+    description: Slim-tip DC input, 135W AC adapter included
+interfaces:
+  - name: eth0
+    type: 1000base-t
+    description: 10/100/1000 Gigabit Ethernet RJ45
+ports:
+  - name: USB-A1
+    type: usb-a
+    description: USB 3.1 Gen2 10Gbps Type-A with always-on charging
+  - name: USB-A2
+    type: usb-a
+    description: USB 3.1 Gen2 10Gbps Type-A
+  - name: USB-A3
+    type: usb-a
+    description: USB 3.1 Gen2 10Gbps Type-A
+  - name: USB-A4
+    type: usb-a
+    description: USB 3.1 Gen2 10Gbps Type-A
+  - name: USB-C1
+    type: usb-c
+    description: USB 3.1 Gen2 10Gbps Type-C, 5V 3A power
+  - name: USB-C2
+    type: usb-c
+    description: USB 3.1 Gen2 10Gbps Type-C, 5V 3A power
+display-ports:
+  - name: DP1
+    type: displayport
+    description: DisplayPort 1.4
+  - name: DP2
+    type: displayport
+    description: DisplayPort 1.4
+  - name: HDMI1
+    type: hdmi
+    description: HDMI 2.0
+  - name: VGA1
+    type: vga
+    description: VGA, 2048x1536 at 85Hz

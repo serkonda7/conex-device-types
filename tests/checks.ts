@@ -10,11 +10,21 @@ import { parse } from 'yaml'
 type Definition = Record<string, any>
 
 /** Lists conex turns into interface stubs; names share one namespace per type. */
-const PORT_KEYS = ['interfaces', 'console-ports', 'power-ports', 'display-ports']
-/** conex InterfacePrefixSchema. */
-const PORT_NAME = /^[A-Za-z0-9_.-]{1,50}$/
+const PORT_KEYS = [
+	'interfaces',
+	'ports',
+	// NetBox's name for general ports, still accepted as an alias.
+	'console-ports',
+	'power-ports',
+	'power-outlets',
+	'display-ports',
+]
+/** conex InterfacePrefixSchema, plus space. */
+const PORT_NAME = /^[A-Za-z0-9_. -]{1,50}$/
+/** Non-ASCII characters allowed in spite of the ASCII-only rule below. */
+const ALLOWED_NON_ASCII = 'äöüÄÖÜßẞ'
 /** Keys validated by schema/conex.json instead of the NetBox schema. */
-const CONEX_KEYS = ['display-ports']
+const CONEX_KEYS = ['ports', 'display-ports']
 
 const ajv = new Ajv2020({ allErrors: true, multipleOfPrecision: 6 })
 for (const name of ['reusable', 'generated_schema', 'components', 'devicetype', 'conex']) {
@@ -82,8 +92,8 @@ export function checkDefinition(file: string, text: string, slugFiles: string[])
 	if (!/\.ya?ml$/.test(base)) {
 		return [`${file}: extension must be .yaml or .yml`]
 	}
-	if ([...text].some((c) => c.charCodeAt(0) > 127)) {
-		return [`${file}: contains non-ASCII characters`]
+	if ([...text].some((c) => c.charCodeAt(0) > 127 && !ALLOWED_NON_ASCII.includes(c))) {
+		return [`${file}: contains non-ASCII characters other than ${ALLOWED_NON_ASCII}`]
 	}
 	let def: Definition | null
 	try {
@@ -134,7 +144,7 @@ export function checkDefinition(file: string, text: string, slugFiles: string[])
 		for (const { name } of (def[key] ?? []) as Definition[]) {
 			if (!PORT_NAME.test(name)) {
 				errors.push(
-					`${file}: ${key} "${name}": at most 50 letters, digits, dot, dash, or underscore`,
+					`${file}: ${key} "${name}": at most 50 letters, digits, space, dot, dash, or underscore`,
 				)
 			}
 			if (names.has(name)) {

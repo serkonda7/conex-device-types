@@ -1,0 +1,49 @@
+---
+manufacturer: ONLINE USV-Systeme
+model: ZINTO 1000
+slug: online-usv-systeme-zinto-1000
+part_number: Z1000
+u_height: 2
+is_full_depth: true
+weight: 14.5
+weight_unit: kg
+airflow: front-to-rear
+description: 1000VA/900W line-interactive rack/tower UPS
+comments: '[Technical data](https://www.online-usv.de/sites/default/files/2022-08/datenblatt-zinto.pdf)'
+ports:
+  - name: Serial
+    type: de-9
+  - name: USB
+    type: usb-b
+power-ports:
+  - name: Input
+    type: iec-60320-c14
+    maximum_draw: 1000
+power-outlets:
+  - name: Outlet 1
+    type: iec-60320-c13
+    power_port: Input
+  - name: Outlet 2
+    type: iec-60320-c13
+    power_port: Input
+  - name: Outlet 3
+    type: iec-60320-c13
+    power_port: Input
+  - name: Outlet 4
+    type: iec-60320-c13
+    power_port: Input
+  - name: Outlet 5
+    type: iec-60320-c13
+    power_port: Input
+  - name: Outlet 6
+    type: iec-60320-c13
+    power_port: Input
+  - name: Outlet 7
+    type: iec-60320-c13
+    power_port: Input
+  - name: Outlet 8
+    type: iec-60320-c13
+    power_port: Input
+module-bays:
+  - name: SNMP Slot
+    position: Rear

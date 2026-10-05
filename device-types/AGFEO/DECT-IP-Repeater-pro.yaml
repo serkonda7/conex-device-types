@@ -1,0 +1,19 @@
+---
+manufacturer: AGFEO
+model: DECT IP-Repeater pro
+slug: agfeo-dect-ip-repeater-pro
+part_number: '6101724'
+u_height: 0
+is_full_depth: false
+airflow: passive
+weight: 196
+weight_unit: g
+comments: '[Datasheet](https://agfeo.de/produkt/dect-ip-repeater-pro/)'
+power-ports:
+  - name: PSU
+    type: dc-terminal
+    description: Included plug-in PSU
+interfaces:
+  - name: DECT
+    type: other
+    description: DECT radio link to DECT IP-Basis pro

@@ -1,0 +1,12 @@
+---
+manufacturer: AGFEO
+model: ES 770 IT
+slug: agfeo-es-770-it
+part_number: ES 770 IT
+u_height: 4
+is_full_depth: false
+weight: 7
+weight_unit: kg
+interfaces:
+  - name: LAN1
+    type: 100base-tx

@@ -4,6 +4,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "conex extensions to the devicetype-library device-type schema. Keys listed here are validated by this schema and stripped before validating against devicetype.json.",
   "properties": {
+    "ports": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/port"
+      }
+    },
     "display-ports": {
       "type": "array",
       "items": {
@@ -13,6 +19,25 @@
   },
   "additionalProperties": false,
   "definitions": {
+    "port": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "type": {
+          "type": "string",
+          "enum": ["rj-45", "de-9", "db-25", "rj-11", "rj-12", "mini-din-8", "usb-a", "usb-b", "usb-c", "usb-mini-a", "usb-mini-b", "usb-micro-a", "usb-micro-b", "usb-micro-ab", "port", "other"]
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200
+        }
+      },
+      "required": ["name"],
+      "additionalProperties": false
+    },
     "display-port": {
       "type": "object",
       "properties": {

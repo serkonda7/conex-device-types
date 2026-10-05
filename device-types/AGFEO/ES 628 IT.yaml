@@ -1,0 +1,12 @@
+---
+manufacturer: AGFEO
+model: ES 628 IT
+slug: agfeo-es-628-it
+part_number: ES 628 IT
+u_height: 1
+is_full_depth: false
+weight: 3
+weight_unit: kg
+interfaces:
+  - name: LAN1
+    type: 100base-tx

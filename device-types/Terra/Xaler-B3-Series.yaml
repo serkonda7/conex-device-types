@@ -1,0 +1,27 @@
+---
+manufacturer: Terra
+model: Xaler B3 Series
+slug: terra-xaler-b3-series
+u_height: 0
+is_full_depth: false
+comments: >-
+  TERRA XALER B3 node as part of a two-node high-availability solution.
+interfaces:
+  - name: VMs G0a
+    type: 1000base-t
+  - name: VMs G0b
+    type: 1000base-t
+  - name: iSCSI_X1a
+    type: 10gbase-t
+  - name: iSCSI_X1b
+    type: 10gbase-t
+  - name: IPMI
+    type: 1000base-t
+    mgmt_only: true
+power-ports:
+  - name: Power
+    type: iec-60320-c14
+display-ports:
+  - name: VGA
+    type: vga
+    description: Console VGA port

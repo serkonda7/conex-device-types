@@ -1,0 +1,14 @@
+---
+manufacturer: AGFEO
+model: ES 770 IT plus
+slug: agfeo-es-770-it-plus
+part_number: ES 770 IT plus
+u_height: 4
+is_full_depth: false
+weight: 7
+weight_unit: kg
+interfaces:
+  - name: LAN1
+    type: 100base-tx
+  - name: LAN2
+    type: 100base-tx

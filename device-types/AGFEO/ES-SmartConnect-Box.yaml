@@ -1,0 +1,19 @@
+---
+manufacturer: AGFEO
+model: ES-SmartConnect Box
+slug: agfeo-es-smartconnect-box
+part_number: '6101506'
+u_height: 0
+is_full_depth: false
+airflow: passive
+comments: '[Datasheet](https://agfeo.de/produkt/es-smartconnect-box/)'
+power-ports:
+  - name: PSU
+    type: dc-terminal
+    description: Optional external PSU, not needed when powered via PoE
+interfaces:
+  - name: LAN
+    type: 100base-tx
+    description: LAN uplink to ES or HyperVoice system
+    poe_mode: pd
+    poe_type: type1-ieee802.3af
