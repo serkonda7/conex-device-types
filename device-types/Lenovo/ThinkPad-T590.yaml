@@ -1,0 +1,41 @@
+---
+manufacturer: Lenovo
+model: ThinkPad T590
+slug: lenovo-thinkpad-t590
+description: ThinkPad T590 15.6 inch business laptop, Intel 8th Gen Core
+comments: '[Lenovo PSREF ThinkPad T590](https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_T590/ThinkPad_T590_Spec.html)'
+u_height: 0
+is_full_depth: false
+weight: 1.75
+weight_unit: kg
+power-ports:
+  - name: DC-IN
+    type: dc-terminal
+    description: Slim-tip AC adapter, 45W or 65W
+interfaces:
+  - name: eth0
+    type: 1000base-t
+    description: Gigabit Ethernet RJ45, Intel I219-V or I219-LM
+  - name: wifi0
+    type: ieee802.11ac
+    description: Wi-Fi 5 802.11ac, Bluetooth 5.0, optional WWAN nano-SIM
+ports:
+  - name: USB-A1
+    type: usb-a
+    description: USB 3.1 Gen 1 Type-A
+  - name: USB-A2
+    type: usb-a
+    description: USB 3.1 Gen 1 Type-A Always On
+  - name: USB-C1
+    type: usb-c
+    description: USB-C 3.1 Gen 1, data, Power Delivery, DisplayPort 1.2
+  - name: USB-C2
+    type: usb-c
+    description: USB-C Thunderbolt 3, data, Power Delivery, DisplayPort 1.2
+  - name: DOCK
+    type: other
+    description: Side docking connector for ThinkPad Basic, Pro and Ultra docks
+display-ports:
+  - name: HDMI1
+    type: hdmi
+    description: HDMI 1.4b

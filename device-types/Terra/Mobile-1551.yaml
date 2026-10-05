@@ -1,0 +1,38 @@
+---
+manufacturer: Terra
+model: Mobile 1551
+slug: terra-mobile-1551
+description: TERRA MOBILE 1551 15.6 inch laptop, FHD non-glare, Intel Core i5-1135G7
+comments: '[Terra Computer Ireland TERRA Laptop 1551 specs](https://terracomputer.ie/product/terra-laptop-1551-intel-core-i5-1135g7-420ghz-8gb-ram-512gb-ssd-windows-11-pro/)'
+u_height: 0
+is_full_depth: false
+weight: 1.7
+weight_unit: kg
+power-ports:
+  - name: DC-IN
+    type: dc-terminal
+    description: External AC adapter, charging via DC-In and USB-C Power Delivery
+interfaces:
+  - name: eth0
+    type: 1000base-t
+    description: Gigabit Ethernet RJ45
+  - name: wifi0
+    type: ieee802.11ax
+    description: Wi-Fi 6 802.11ax, Bluetooth 5.2
+ports:
+  - name: USB-A1
+    type: usb-a
+    description: USB 3.2 Gen 2 Type-A
+  - name: USB-A2
+    type: usb-a
+    description: USB 2.0 Type-A
+  - name: USB-C1
+    type: usb-c
+    description: USB 3.2 Gen 2 Type-C
+  - name: USB-C2
+    type: usb-c
+    description: Thunderbolt 4 Type-C, Power Delivery, DisplayPort alt mode
+display-ports:
+  - name: HDMI1
+    type: hdmi
+    description: HDMI
