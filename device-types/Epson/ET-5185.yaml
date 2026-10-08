@@ -1,0 +1,31 @@
+---
+manufacturer: Epson
+model: ET-5185
+slug: epson-et-5185
+description: EcoTank Pro ET-5185 A4 multifunction inkjet printer with fax, duplex and ADF
+comments: '[Product page](https://www.epson.ie/en_IE/products/printers/inkjet/business-inkjet/ecotank-pro-et-5185-a4-multifunction-wi-fi-ink-tank-printer-with-fax/p/41860)'
+u_height: 0
+is_full_depth: false
+weight: 7.3
+weight_unit: kg
+power-ports:
+  - name: PSU
+    type: iec-60320-c14
+    description: AC inlet 100-240V
+interfaces:
+  - name: eth0
+    type: 100base-tx
+    description: Ethernet 10/100Base-TX
+  - name: wifi0
+    type: ieee802.11n
+    description: Wi-Fi 802.11b/g/n
+ports:
+  - name: USB
+    type: usb-b
+    description: Hi-Speed USB device port, compatible with USB 2.0
+  - name: LINE
+    type: rj-11
+    description: Fax line port
+  - name: EXT
+    type: rj-11
+    description: External telephone port

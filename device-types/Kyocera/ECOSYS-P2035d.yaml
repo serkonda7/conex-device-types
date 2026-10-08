@@ -1,0 +1,18 @@
+---
+manufacturer: Kyocera
+model: ECOSYS P2035d
+slug: kyocera-ecosys-p2035d
+description: ECOSYS P2035d A4 mono laser printer, 35 ppm, automatic duplex
+comments: '[Datasheet](https://www.managedtechnology.co.uk/wp-content/products/datasheets/ECOSYS-P2035d.pdf)'
+u_height: 0
+is_full_depth: false
+weight: 12
+weight_unit: kg
+power-ports:
+  - name: PSU
+    type: iec-60320-c14
+    description: AC inlet 220-240V, printing 535W
+ports:
+  - name: USB
+    type: usb-b
+    description: USB 2.0 Hi-Speed device port, network optional via KUIO slot
