@@ -12,7 +12,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
     "@serkonda7/conex-device-schema": "^0.2.0",
-    "@types/bun": "1.4.2",
+    "@types/bun": "1.4.4",
     "lefthook": "^2.1.16",
     "typescript": "^7.0.2",
     "yaml": "^2.9.1"
