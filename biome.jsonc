@@ -6,9 +6,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    // schema/ is vendored verbatim from netbox-community/devicetype-library;
     // YAML waits for Biome 2.6; scripts/lint_yaml.ts covers it until then.
-    "includes": ["**", "!schema", "!**/*.md", "!**/*.yaml", "!**/*.yml"]
+    "includes": ["**", "!**/*.md", "!**/*.yaml", "!**/*.yml"]
   },
   "formatter": {
     "enabled": true,

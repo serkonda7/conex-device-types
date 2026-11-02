@@ -1,19 +1,15 @@
 # conex-device-types
-
 Device type definitions for [conex](https://github.com/serkonda7/conex): one
 YAML file per model in `device-types/<Manufacturer>/<model>.yaml`.
 
-The format is the [NetBox devicetype-library](https://github.com/netbox-community/devicetype-library)
-format, so definitions can be copied from there. Conex imports `u_height`,
-`is_full_depth`, `description`, `comments`, and the port lists `interfaces`,
-`ports`, `power-ports`, `power-outlets` and `display-ports`, and ignores everything else.
-`console-ports` is accepted as an alias of `ports`.
+Definitions are validated with the rules conex imports by, from
+[`@serkonda7/conex-device-schema`](https://github.com/serkonda7/conex/tree/main/packages/device-schema).
+Conex ignores keys it doesn't know, but this repo refuses them. `console-ports` is accepted as an alias of `ports`.
 
 ```yaml
 ---
 manufacturer: Generic
 model: Example Switch 8
-slug: generic-example-switch-8
 u_height: 1
 is_full_depth: false
 interfaces:
@@ -27,21 +23,33 @@ display-ports: # conex only: hdmi, displayport, vga, dvi
     type: hdmi
 ```
 
-Conex adds these rules on top of NetBox's:
-
+Differences from NetBox:
 - `u_height` must be a whole number from 0 to 60.
-- Port names must be unique, with at most 50 letters, digits, space, `.`, `-`, or `_`.
+- Port names must be unique, with at most 50 characters.
+  Rear and front ports have their own namespace per side.
+- `interfaces`, `rear-ports`, `front-ports`, `ports` and `console-ports` only take the
+  types conex knows, listed in the package's constants; conex refuses the other NetBox types.
+- `power-ports` and `power-outlets` take any type. Conex imports an unknown one as a
+  generic connector, and adds the type `dc-barrel`.
+- A front port needs a free position of a rear port in the same file.
+- `poe_type` needs `poe_mode`.
+- `default_device_role`: role preselected for devices of this type. The name must
+  exist in the conex instance, or the import fails.
+- `spec_url`: link to the datasheet, at most 200 characters.
+- `eol_date`: last supported day, as `YYYY-MM-DD`.
+
+This repo also checks that the manufacturer matches the directory, the file name matches the
+model or part number, and a model exists once. Update the package to pick up changed conex rules.
+
 
 ## Development
-
 ```sh
-bun install             # also installs the pre-commit hook
-bun run check           # YAML lint, Biome, definition tests
-bun run update-schema   # refresh schema/ from NetBox
+bun install   # also installs the pre-commit hook
+bun run check # YAML lint, Biome, definition tests
 ```
 
 Import into conex via Device Types → Import.
 
-## License
 
-[CC0 1.0](LICENSE.txt), as upstream.
+## License
+[CC0 1.0](LICENSE.txt).

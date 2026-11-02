@@ -1,7 +1,6 @@
 ---
 manufacturer: Epson
 model: DS-730N
-slug: epson-ds-730n
 description: WorkForce DS-730N network colour duplex document scanner, 40 ppm, 100-sheet ADF
 comments: '[Spec sheet](https://mediaserver.goepson.com/ImConvServlet/imconv/fa5f2c51bb77fdb83d5f598076f63dbd7a8caa49/original?assetDescr=DS-730N-Scanner_Product-Spec-Sheet_CPD-60104-Final.pdf)'
 u_height: 0
